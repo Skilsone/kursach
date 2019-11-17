@@ -18,6 +18,7 @@ int main() {
     {
         case 1:
             generate((int**)A, N);
+            printf("Hello world");
             break;
         case 2:
             for(int i = 0; i < N; i++){
