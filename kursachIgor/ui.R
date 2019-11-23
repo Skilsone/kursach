@@ -7,7 +7,7 @@ ui <- fluidPage(
   tags$head( tags$link ( rel = "stylesheet " , type = "text/css" , href = "main.css")),
   # Application title
   titlePanel("Old Faithful Geyser Data"),
-  h1("Kursach"),
+  
   # Sidebar with a slider input for number of bins 
   sidebarLayout( 
     sidebarPanel( h3("Data Selection"), 
