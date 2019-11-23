@@ -6,14 +6,16 @@ ui <- fluidPage(
   
   includeCSS("main.css"),
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Расчёт регрессий"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout( 
-    sidebarPanel( h3("Data Selection"), 
-                  selectInput("ds", "Choose a dataset:",  choices = c("iris", "Spam", "mtcars")),
-                  numericInput("obs",  "Number of Obs:",  10),  
-                  submitButton("Load Preview Data") 
+    sidebarPanel( h3("Загрузите файл"), 
+                  fileInput("file1", "Загрузите таблицу в формате .csv",
+                            multiple = FALSE,
+                            accept = c("text/csv",
+                                       "text/comma-separated-values,text/plain",
+                                       ".csv")),
     ),
     # Show a plot of the generated distribution
     mainPanel(
