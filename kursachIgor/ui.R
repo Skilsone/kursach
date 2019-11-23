@@ -1,5 +1,5 @@
 library(shiny)
-inc
+
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
