@@ -4,7 +4,7 @@ library(shiny)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
   
-  tags$head( tags$link ( rel = "stylesheet " , type = "text/css" , href = "main.css")),
+  includeCSS("main.css"),
   # Application title
   titlePanel("Old Faithful Geyser Data"),
   
