@@ -11,13 +11,14 @@ ui <- fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout( 
     sidebarPanel( h3("Data Selection"), 
-                  selectInput("ds", "Choose a dataset:",  choices = c("iris", "Spam", "mtcars")),
-                  numericInput("obs",  "Number of Obs:",  10),  
+                verticalLayout("Name1", "Name2", "Name3"),
+          radioButtons(inputId="color", "Choose", list("blue", "green", "green")),
                   submitButton("Load Preview Data") 
     ),
     # Show a plot of the generated distribution
     mainPanel(
-      plotOutput("distPlot")
+      plotOutput(outputId = "box"),
+      
     )
   ),
 )
