@@ -16,15 +16,15 @@ ui <- fluidPage(
                           accept = c("text/csv",
                                        "text/comma-separated-values,text/plain",
                                        ".csv")),
-                checkboxGroupInput("checkGroup", label = h3("Checkbox group"), 
-                      choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
+                checkboxGroupInput("checkGroup", label = h3("Выберите предикторы"), 
+                      choices = list("Липпидограмма" = 1, "Анализ крови" = 2, "ЭКГ" = 3),
                           selected = 1),
     ),
     # Show a plot of the generated distribution
     mainPanel(
       navbarPage(
         title = 'Выбранные предикторы',
-        tabPanel('Липпидограмма'),
+        tabPanel('Липпидограмма', "lip"),
         tabPanel('Анализ крови'),
         tabPanel('ЭКГ')
       ),
