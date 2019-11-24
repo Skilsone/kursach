@@ -22,6 +22,12 @@ ui <- fluidPage(
     ),
     # Show a plot of the generated distribution
     mainPanel(
+      navbarPage(
+        title = 'Выбранные предикторы',
+        tabPanel('Липпидограмма'),
+        tabPanel('Анализ крови'),
+        tabPanel('ЭКГ')
+      ),
       plotOutput(outputId = "box"),
       
     )
