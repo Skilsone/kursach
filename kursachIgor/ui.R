@@ -10,7 +10,7 @@ ui <- fluidPage(
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout( 
-    sidebarPanel( h3("Загрузите файл"), 
+     sidebarPanel(h3("Загрузите файл"), 
                 fileInput("file1", "Загрузите таблицу в формате .csv",
                           multiple = FALSE,
                           accept = c("text/csv",
@@ -22,15 +22,14 @@ ui <- fluidPage(
     ),
     # Show a plot of the generated distribution
     mainPanel(
-      navbarPage(
+      tags$div(class = "mainpanel", navbarPage(
         title = 'Выбранные предикторы',
         tabPanel('Липпидограмма', "lip"),
         tabPanel('Анализ крови'),
         tabPanel('ЭКГ')
       ),
-      plotOutput(outputId = "box"),
-      
-    )
-  ),
+      plotOutput("distPlot"),
+    )),
+),
 )
 
