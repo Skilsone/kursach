@@ -1,6 +1,18 @@
+.page {
+  background-color: #ABCDEF; 
+}
 h3 {
   color: red;
 }
 .mainpanel {
-  background-color: #ABCDEF;
+  background-color: whitesmoke;
+}
+.sidebar {
+  background-color: whitesmoke;
+}
+.title {
+  margin: auto;
+  font-family: serif;
+  font-size: 35px;
+  font-weight: bold;
 }
